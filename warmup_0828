@@ -1,0 +1,19 @@
+# Warmup for Tuesday, August 28
+# How many distinct notes will you hear when I run this code?
+
+use_bpm 120
+
+3.times do
+  2.times do
+    play :C3
+    sleep 1
+  end
+  play :E3
+  2.times do
+    sleep 1
+  end
+end
+
+# The answer is: 9
+# Comment out line 9 and the answer is: 3
+# Comment out lines 12-14 and the answer is: 7
