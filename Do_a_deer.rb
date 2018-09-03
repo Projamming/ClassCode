@@ -2,15 +2,15 @@
 
 use_bpm 120
 
-def metronome
+define :metronome do
   live_loop :metro do
     sample :elec_flip
     sleep 1
   end
 end
 
-def melody
-  live_loop :melody do
+define :melody do
+  live_loop :mel do
     
     use_synth :blade
     
@@ -24,8 +24,8 @@ def melody
   end
 end
 
-def harmony
-  live_loop :harmony do
+define :harmony do
+  live_loop :har do
     
     use_synth :piano
     
