@@ -1,0 +1,62 @@
+# Written in class on Tuesday, September 11.
+# We took the code for the Marinera rhythm (see below), which was
+# written in sample/sleep format, and compressed it into a couple
+# of rings. To simplify the rings, we also defined two variables:
+
+tom =  :drum_tom_hi_hard
+bass = :drum_bass_hard
+
+define :rhythm do
+  
+  tick
+  
+  drums = (ring tom, bass, tom, bass, tom, bass, tom)
+  drums_sleep = (ring 0.5, 0.25, 0.25, 0.5, 0.5, 0.5, 0.5)
+  drums_amps = (ring 2, 1, 1, 1, 2, 1, 1)
+  
+  sample drums.look, amp: drums_amps.look
+  sleep drums_sleep.look
+  
+  # This is the original code, which we compressed into the rings above:
+  
+  ##| sample :drum_tom_hi_hard, amp: 2
+  ##| sleep 0.5
+  ##| sample :drum_bass_hard
+  ##| sleep 0.25
+  ##| sample :drum_tom_hi_hard
+  ##| sleep 0.25
+  ##| sample :drum_bass_hard
+  ##| sleep 0.5
+  ##| sample :drum_tom_hi_hard, amp: 2
+  ##| sleep 0.5
+  ##| sample :drum_bass_hard
+  ##| sleep 0.5
+  ##| sample :drum_tom_hi_hard
+  ##| sleep 0.5
+  
+end
+
+7.times do
+  use_bpm 60
+  rhythm
+end
+
+
+7.times do
+  use_bpm 80
+  rhythm
+end
+
+
+7.times do
+  use_bpm 100
+  rhythm
+end
+
+
+21.times do
+  use_bpm 120
+  rhythm
+end
+
+sleep 1
