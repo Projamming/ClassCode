@@ -1,0 +1,19 @@
+# Warmup for Tuesday, September 11
+
+# Supply the line of code that would play the sample drum_bass_soft
+# every time the clock tick points at a 2 inside the ring beats.
+
+# Note: we messed with this code pretty heavily after we discussed
+# the correct answer!
+
+loop do
+  tick
+  rest = 0
+  apple = (ring rest, 1, 2, 2, rest, 1, 2, 2)
+  sample :drum_cymbal_soft if apple.look == 1
+  if apple.look == 2
+    sample :drum_cowbell, amp: 0.2
+    sample :drum_bass_hard
+  end
+  sleep 0.25
+end
