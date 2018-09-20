@@ -1,0 +1,23 @@
+# In class, Thursday, September 20
+# Demonstrating chords and randomness!
+
+# This chooses a new 'pseudo-random' sequence of values:
+use_random_seed 825
+
+# Use these lists in the loop if you want to try notes:
+c_major = [:C3, :E3, :G3, :C4, :E4]
+c_minor = [:C3, :Eb3, :G3, :C4, :Eb4]
+
+# Here is a list of chords that we will choose from at random:
+c_chords = [chord(:C3, :major),
+            chord(:F3, :major),
+            chord(:G3, :major),
+            chord(:A3, :minor)]
+
+use_synth :piano
+
+8.times do
+  # The 'choose' function picks a random element from the list c_chords:
+  play choose(c_chords)
+  sleep 0.5
+end
