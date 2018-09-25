@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------- #
-# FILE    : class_0926.rb
+# FILE    : class_0925.rb
 # AUTHOR  : Jiin Jeong
 # DESC    : Intro to external samples and summary of
 #           different ways of creating/modifying sound.
