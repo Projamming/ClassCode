@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------- #
-# FILE    : class_0926ex.rb
+# FILE    : class_0925ex.rb
 # AUTHOR  : Jiin Jeong
 # DESC    : First two mama melodies in Bohemian Rhapsody.
 #           (Could be synced better :/)
