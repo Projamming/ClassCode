@@ -3,6 +3,8 @@
 # AUTHOR  : Jiin Jeong
 # DESC    : Intro to external samples and summary of
 #           different ways of creating/modifying sound.
+#
+# To test out, download the music files!
 # ----------------------------------------------------------------- #
 
 # ============== PART 1 (Samples) ============== #
