@@ -4,8 +4,13 @@
 # written in sample/sleep format, and compressed it into a couple
 # of rings. To simplify the rings, we also defined two variables:
 
-kick = sample :drum_heavy_kick
-tom = sample :drum_tom_hi_soft
+##| kick = sample :drum_heavy_kick  # We can't write "sample" in the definition
+##| tom = sample :drum_tom_hi_soft
+
+# Use this instead:
+kick = :drum_heavy_kick
+tom = :drum_tom_hi_soft
+
 
 use_bpm 200
 
@@ -13,11 +18,19 @@ live_loop :calypso do
   
   tick
   
-  drums = (ring kick, try, kick, tom, kick, tom, tom, kick, tom)
+  drums = (ring kick, tom, kick, tom, kick, tom, tom, kick, tom)
   drums_sleep = (ring 1.5, 0.5, 1, 1, 0.5, 1, 0.5, 1, 1)
   
-  drums.look
+  ## Note: You can't use 'play' to call a sample ##
+  ## you can't just call the ring without using 'sample' to call the
+  ## kick and tom samples.
+  ##| drums.look
+  
+  # Use this instead:
+  sample drums.look
   sleep drums_sleep.look
+  
+  end
   
   ##| sample :drum_heavy_kick
   ##| sleep 1.5
@@ -38,4 +51,4 @@ live_loop :calypso do
   ##| sample :drum_tom_hi_soft
   ##| sleep 1
   
-end
+
