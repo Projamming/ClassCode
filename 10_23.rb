@@ -94,7 +94,7 @@ def rock_paper_scissor
 	  	return "Win :)"
 	  else
 	  	return "Lose :("
-	  end
+	  end  # Every if needs an END!
 	
 	# IF computer chose paper.
 	elsif pc_choice == "Paper"
