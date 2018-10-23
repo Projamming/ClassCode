@@ -6,43 +6,43 @@
 # ======================= Basic Ruby Data Types =======================
 # Function
 def datatype
-	# Data -- information stored in a computer.
-	# String -- sequence of characters. single ('') or double quotes ("").
-	puts "Hello"
-	puts 'Hi'
+  # Data -- information stored in a computer.
+  # String -- sequence of characters. single ('') or double quotes ("").
+  puts "Hello"
+  puts 'Hi'
 
-	# Integer -- integers.
-	puts 40
+  # Integer -- integers.
+  puts 40
 
-	# Float -- numbers with decimals.
-	puts 40.5
+  # Float -- numbers with decimals.
+  puts 40.5
 
-	# Boolean -- true/false values.
-	puts true
-	puts false
+  # Boolean -- true/false values.
+  puts true
+  puts false
 
-	# .methods -- shows all the methods available for the data type.
-	puts false.methods
+  # .methods -- shows all the methods available for the data type.
+  puts false.methods
 end
 
 # =======================  Basic Ruby Commands  =======================
 def strings
-	# print -- prints without new line.
-	# puts -- prints with new line.
-	print "Hello"
-	print "Dave"
-	print "\n"  # New line character
-	puts "Hello Dave"
+  # print -- prints without new line.
+  # puts -- prints with new line.
+  print "Hello"
+  print "Dave"
+  print "\n"  # New line character
+  puts "Hello Dave"
 
-	# .downcase -- Turns every letter into downcase.
-	# .upcase -- Capitalizes every letter.
-	puts "JIiN".downcase
-	puts "hello cLaSs".upcase
+  # .downcase -- Turns every letter into downcase.
+  # .upcase -- Capitalizes every letter.
+  puts "JIiN".downcase
+  puts "hello cLaSs".upcase
 
-	# .to_s -- Turns another data type into string.
-	puts 40.to_s + "20"
+  # .to_s -- Turns another data type into string.
+  puts 40.to_s + "20"
 
-	# .to_i -- String to integer.
+  # .to_i -- String to integer.
   puts "40".to_i + 20
   
   # What would happen if we did not do these conversions?
@@ -126,21 +126,15 @@ def shorter_rps
   puts "The computer picked #{pc_choice.upcase}."
   puts "You picked #{input.upcase}."
 
-	if (pc_choice == "Rock" && input == "paper") ||
+  if (pc_choice == "Rock" && input == "paper") ||
 		 (pc_choice == "Paper" && input == "scissor") ||
 		 (pc_choice == "Scissor" && input == "rock")
-		 return "Win :)"
+     return "Win :)"
   elsif (pc_choice == "Rock" && input == "rock") ||
 		 (pc_choice == "Paper" && input == "paper") ||
 		 (pc_choice == "Scissor" && input == "scissor")
-		 return "Tie :/"
-	else
-		return "Lose :("
-	end
+     return "Tie :/"
+  else
+     return "Lose :("
+  end
 end
-
-# ======================= Lab Q1 =======================
-# Modify the function 'greet' so that it asks
-# where the user is from and greets them.
-# Ex: Hello, John from New Hampshire!
-
