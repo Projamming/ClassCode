@@ -86,6 +86,7 @@ def rock_paper_scissor
   puts "You picked #{input.upcase}."
 
     # If statement.
+	# IF computer chose rock.
 	if pc_choice == "Rock"
 	  if input == "rock"
 	  	return "Tie :/"
@@ -94,6 +95,8 @@ def rock_paper_scissor
 	  else
 	  	return "Lose :("
 	  end
+	
+	# IF computer chose paper.
 	elsif pc_choice == "Paper"
 	  if input == "rock"
 	  	return "Lose :("
@@ -102,6 +105,8 @@ def rock_paper_scissor
 	  else
 	  	return "Win :)"
 	  end
+	
+	# If computer chose scissor.
 	else
 	  if input == "rock"
 	  	return "Win :)"
