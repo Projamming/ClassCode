@@ -1,3 +1,5 @@
+# Prof. Perkin's answers!
+
 # Question 1
 print "What is your name? "
 username = gets.chomp
