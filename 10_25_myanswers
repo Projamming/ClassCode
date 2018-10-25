@@ -1,0 +1,85 @@
+# Q1. Write a program that asks the user to choose two numbers. The program
+# should then choose a random number between them, and print 'Quack!' that
+# many times.
+
+def random_ducks
+  print "Enter the minimum number of ducks: "
+  min = gets.chomp
+  print "Enter the maximum number of ducks: "
+  max = gets.chomp
+  num_ducks = (min ... max).to_a.sample
+  puts "The #{num_ducks} ducks say:"
+  num_ducks.to_i.times do
+    puts "Quack!"
+  end
+end
+
+# Q2. Check the output of each of these three commands:
+# > puts "a" < "b"
+# > puts "c" < "b"
+# > ("a" ... "z").to_a.sample
+# If you understand the output, continue (otherwise ask for help).
+# Write a program that chooses a random letter of the alphabet and
+# then asks the user to guess letters until they are correct. The 
+# program should respond to incorrect guesses helpfully.
+
+def guess_letter
+
+  # The AI chooses a random number:
+  ai_pick = ("a" ... "z").to_a.sample
+  # For debugging:
+  puts "AI chose #{ai_pick}"
+
+  counter = 0
+
+  loop do
+    print "What is your guess? "
+    counter += 1
+    guess = gets.chomp
+    if guess > ai_pick
+      puts "You guessed too high!"
+    elsif guess < ai_pick
+      puts "You guessed too low!"
+    else
+      puts "Nailed it! It took you #{counter} tries."
+      break
+    end
+  end
+
+end
+
+# Q3. Type this into the REPL and see if you understand what is
+# being done. If so, continue; otherwise, ask for help.
+# > s = "david"
+# > t = s.chars.shuffle.join
+# Write a game that asks the user to type in a word, then use a loop
+# to scroll that info off the top of the screen. Scramble the word
+# and show it to the user. Allow them to guess the unscrambled word.
+# Of course, this is best done with a neighbor.  :)
+
+def shuffle
+  print "Enter a word: "
+  word = gets.chomp.upcase
+
+  # Scroll that input up off the screen to hide it:
+  50.times do
+    puts ""
+  end
+
+  scrambled = word.chars.shuffle.join
+  puts "Your clue is: #{scrambled}"
+
+  counter = 0
+
+  loop do
+    print "What is your guess? "
+    counter += 1
+    guess = gets.chomp.upcase
+    if guess == word
+      puts "You got it in #{counter} guesses. Nice job!"
+      break
+    else
+      puts "That's not it. Keep trying!"
+    end
+  end
+end
