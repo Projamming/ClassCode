@@ -1,0 +1,23 @@
+For in class, Thursday, October 25
+
+Q1. Write a program that asks the user to choose two numbers. The program should then choose a random number
+between them, and print 'Quack!' that many times.
+
+Q2. Check the output of each of these three commands:
+> puts "a" < "b"
+> puts "c" < "b"
+> ("a" ... "z").to_a.sample
+If you understand the output, continue (otherwise ask for help).
+Write a program that chooses a random letter of the alphabet and
+then asks the user to guess letters until they are correct. The
+program should respond to incorrect guesses helpfully.
+
+Q3. Type this into the REPL and see if you understand what is
+being done. If so, continue; otherwise, ask for help.
+> s = "david"
+> t = s.chars.shuffle.join
+Write a game that asks the user to type in a word, then use a loop to scroll that info off the top of the
+screen. Scramble the word and show it to the user. Allow them to guess the unscrambled word. Of course, this
+is best done with a neighbor.  :)
+
+I will post Project 6 soon!
