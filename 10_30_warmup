@@ -1,0 +1,9 @@
+# Warmup for Tuesday, October 30
+# Please don't use a computer for this.
+# This will also serve as a hint for Q3 on P6.
+
+sunny = "computer science"
+
+# Give me a line that would return
+# the output: "comp sci"
+sunny[0, 4] + sunny[8, 4]
