@@ -1,0 +1,17 @@
+;; Note: this is for the first day of Clojure:
+
+;; Q1. Predict the output of this statement before you check:
+(- (/ 18 3) (* 3 2))
+
+;; Q2. Write a little math puzzle like that one and give it to
+;; your neighbor to try.
+
+;; Q3. Predict the output of this statement before you check:
+(= (mod 14 3) (mod 19 5))
+
+;; Q4. What is a number that could go in the blank to make
+;; this statement return "true"?
+(> (mod 11 4) (mod 5 __))
+
+;; Q5. Predict the output before you check:
+(drop 5 (take 5 (range 20)))
