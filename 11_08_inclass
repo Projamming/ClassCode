@@ -1,0 +1,54 @@
+;; Warmup for Thursday, November 8
+
+(def lst1 '(2 3 4))
+(def lst2 '(4 3 2))
+
+;; What list does this statement output? If you put commas
+;; in your answer, I'm not giving you credit.  :)
+;; (map / lst1 lst2)
+
+;; Answer: (1/2 1 2)
+;; What if we wanted to add all of these entries together?
+
+;; apply
+;; (apply <func> <list>)
+;; works as if we wrote: <func list_entries>
+
+;; (def numbers (range 5))
+;; (+ 0 1 2 3 4)
+;; But this does not work:
+;; (+ numbers)
+
+;; These are all identical:
+;; (apply + '(0 1 2 3 4))
+;; (apply + (range 5))
+;; (apply + numbers)
+
+;; Warmup #2: What is the output?
+;; (def my_list (map / lst1 lst2))
+;; (apply + my_list)
+
+(apply * '(1 2 3))
+
+;; Warmup 3: Write a function 'fact' that returns n!
+;; Note: n! is the product of the numbers 1 to n.
+
+(defn fact
+  "Returns n!"
+  [n]
+  (apply * (rest (range (inc n)))))
+
+;; Check this out:
+(map inc (range 5))
+
+(defn fact2
+  "Returns n!"
+  [n]
+  (apply * (map inc (range n))))
+
+;; Warmup 4: Now try summing:
+
+(defn summer
+  "Returns the sum of the first n integers."
+  [n]
+  (apply + (map inc (range n))))
