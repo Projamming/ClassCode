@@ -32,6 +32,6 @@ end
 def q3
  print "Enter a word:"
  word = gets.chomp
- scramble = word[1..-1].chars.shuffle.join  # Scrambles only the middle
+ scramble = word[1..-2].chars.shuffle.join  # Scrambles only the middle
  puts "Scrambled version: #{word[0] + scramble + word[-1]}"
 end
