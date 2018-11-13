@@ -1,0 +1,43 @@
+(ns lesson.core
+  (:use [overtone.live]
+        [overtone.inst.piano]))
+
+(defn foo
+  "I don't do a whole lot."
+  [x]
+  (println x "Hello, World!"))
+
+(defn my-chord
+    []
+    (piano 60)
+    (piano 64)
+    (piano 67))
+
+(defn my-chord-2
+    []
+    (piano 70)
+    (piano 74)
+    (piano 77))
+
+; (at (+ 3000 (now)) (my-chord-2))
+; (at (+ 4000 (now)) (my-chord))
+
+; (piano :C4)
+
+(definst hat [volume 2.0]
+  (let [src (white-noise)
+        env (env-gen (perc 0.001 0.3) :action FREE)]
+    (* volume 1 src env)))
+
+
+(defn play-hat
+    [time]
+    (at (+ 0 time) (hat 0.25))
+    (at (+ 1000 time) (hat 0.5) (my-chord-2))
+    (at (+ 2000 time) (hat 0.75))
+    (at (+ 3000 time) (my-chord)))
+
+(play-hat (+ 4000 (now)))
+
+;; This acts like a ticking clock from Sonic Pi:
+(def my-metro (metronome 240))
